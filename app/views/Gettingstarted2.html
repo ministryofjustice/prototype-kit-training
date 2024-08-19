@@ -1,0 +1,89 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+		<div class="govuk-grid-column-full">
+		    <h1 class="govuk-heading-xl">
+		      MOJ Prototype Kit Training 
+		    </h1>
+		</div>
+
+	  <div class="govuk-grid-column-one-third">
+
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	       <li class="moj-side-navigation__item ">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item  moj-side-navigation__item--active">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	         <a href="Tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item ">
+	          <a href="Tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial3">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+	      </ul>
+	    </nav>
+
+	  </div>
+
+
+
+	 
+<div class="govuk-grid-column-two-thirds">
+	 	<h2 class="govuk-heading-l">Getting started - Checking node</h2>
+
+	 	<p>Next, we need to check which version of node your machine is running. To do this we first need to open the terminal. If you are using a Mac press <span style="font-weight: bold;"> command and space</span>, this will bring up a search bar. In the search bar type in 'terminal'. <br> <br> The terminal can also be found by clicking the magnifing glass in the top right of your screen in the navigation. Again, type 'terminal' and press enter into the search bar and this will open up the terminal. 	</p>
+
+		<div style="position: relative; padding-bottom: 44.166666666666664%; height: 0;">
+			<iframe src="https://www.loom.com/embed/25572c8d9fec4f90bcbc405535bdb1f7?sid=5e6dbc1c-3878-40e7-b36e-f5091a9915b7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0px; width: 100%; height: 100%;">
+			</iframe>
+		</div>
+
+		<br><br>
+
+
+		<p>Above is a video of opening up the terminal and what it looks like</p>
+
+		<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e7025cea37f047b5a2c87fd23bff959d?sid=7e44d84f-042d-474d-a753-6167623e48b2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0px; width: 100%; height: 100%;"></iframe></div>
+
+		 <br><br>
+
+	 	<p> To check the node versioning type <span style="font-weight: bold;"> node --version </span> into the terminal and press enter. It will display a number, this is the version of node on your machine. </p>
+
+
+	 	<p> This unfortunately is the part where if the versioning is not relatively up to date, external help is needed. Help to gain temp admin rights to your machine is possible and can be granted by the IT help desk. You can contact them on slack. </p>
+
+	 	<p> GDS reccomend having version 20, which can be downloaded from self service and also can be found on <a href="https://nodejs.org/en/">the Node.js website.</a></p>
+
+
+	 
+	 </div>	
+	 </div>
+	</div>
+
+
+
+{% endblock %}

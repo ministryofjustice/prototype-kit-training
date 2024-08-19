@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check your answers before sending your application
+      </h1>
+
+        <h2 class="govuk-heading-m">Personal details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your name?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['currentname'] or ['Current name not entered'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you want to change your name?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{data['choicenewname'] or ['Nothing selected']}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+            </dd>
+          </div>
+
+          {% if  data['choicenewname'] == "Yes"  %}
+
+          
+        
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your new name?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['newname'] or ['New name not entered'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+            </dd>
+          </div>
+
+        {% endif %}
+          
+        </dl>
+         <h2 class="govuk-heading-m">
+        Now send your application
+      </h2>
+
+      <p>
+        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      </p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Accept and send"
+        }) }}
+
+      </form>
+     
+</div>
+
+     
+
+    </div>
+  </div>
+{% endblock %}
+
+
+<script>
+
+function myInvoiceRevealFunction(summary) {
+  var displayinformation = summary.parentElement.parentElement.nextElementSibling;
+  var tableRow = summary.parentElement.parentElement;
+
+
+  if (displayinformation.style.display === "none") {
+    displayinformation.style.display = "table-row";
+
+     for(var i=0; i<tableRow.cells.length; i++) {
+       tableRow.cells[i].style.borderBottomColor = 'white';
+
+}
+  } else {
+    displayinformation.style.display = "none";
+
+    for(var i=0; i<tableRow.cells.length; i++) {
+       tableRow.cells[i].style.borderBottomColor = '#b1b4b6';
+    }
+  }
+
+}
+
+</script>

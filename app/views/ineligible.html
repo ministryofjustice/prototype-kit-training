@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Sorry, this service is for people who want to change their name
+      </h1>
+
+      <p style="padding-left: 0px;">
+         If you would like to change your name please try the service again. To start again please <a href="prototype-kit-training-page">click this link</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

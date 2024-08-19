@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-full">
+	    <h1 class="govuk-heading-xl">
+	      MOJ Prototype Kit Training 
+	    </h1>
+	</div>
+
+	  <div class="govuk-grid-column-one-third">
+
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	        <li class="moj-side-navigation__item ">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+	          <a href="Tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial3">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+	      </ul>
+	    </nav>
+
+	  </div>
+
+
+ <div class="govuk-grid-column-two-thirds">
+	 	<h2 class="govuk-heading-l">Tutorial Two: Passing data between pages</h2>
+
+
+
+	 	<p> To begin passing data between pages we need to modify our question and check answers pages.	</p>
+
+	 	<p> On the first question page, take note of the input and more specifically the name. For example the one used in this tutorial is <span style="font-weight: bold;"> name="currentname" </span>. This is what we shall use on the check answers page to then get the prototype to resurface whatever is typed into that input </p>
+
+	 	<p> Within the check your answers page locate the value and text for the first question. In the text section enter the following  <span style="font-weight: bold;"> data['currentname'] or ['Current name not entered'] </span>. The video before will help you make sure this is done correctly. </p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f4ee78a7d4a745ff92aad6faddbafa0c?sid=edbb76fe-85f0-4699-a2bc-5c491946820d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<p>It should look like the above video for question one. </p>
+
+	 	<p>For passing data from the second radio button question we need to again remember the value for the radio buttons. Go to the code for this page and our example is <span style="font-weight: bold;"> name="choicenewname" </span>.</p> 
+
+	 	<p>Also on this page you will need to change the values on each of the options. In our example we have a yes or no radio button choice so change the text to <span style="font-weight: bold;"> value="Yes" </span>  and <span style="font-weight: bold;"> value="No" </span>. This will mean that whichever choice is selected the right value will be displayed on the check answers page. </p>
+
+	 	<p> Now back on the check answers page we need to again get the prototype to resurface this remembered data in the right place. Repeat the same step of entering the right pieces of code in the correlating place for the second question. Place the following <span style="font-weight: bold;"> data['choicenewname'] or ['Current name not entered']  </span>. This will again bring through and display whatever choice is made on the radio buttons. </p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/53b4aca4c2d44e1a81a64777ba456c00?sid=6a515e0f-e9bf-42fb-8adb-5df7448983bf" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<p>It should look like the above video for question two. </p>
+
+	 	<p>The final step to this is just completing these steps for the last question </p>
+
+	 	<p>Repeat the same step of changing the code for the name in the input. For the example we have used it will be as follows <span style="font-weight: bold;"> name="newname" </span>  </p>
+
+	 	<p> Finally place the <span style="font-weight: bold;"> data['newname'] or ['Current name not entered']  </span> in the text section for the third question on the check answers page.</p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/45ccf2190f90451287a63a5cca41b6bf?sid=3c0d15af-6c03-45fb-854f-920ab3247fca" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+
+	 	<p>It should look like the above video for question three. </p>
+
+	 	<p>Below is a video of how the prototype should now run through the pages remembering the data and then resurfacing whatever was inputted in the right place.</p>
+
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/91c4a51e278943ba945a4db3f59dd7e8?sid=89ce1bb1-9039-48d4-bb3e-cfae0aebfb06" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+
+
+
+
+
+
+
+	</div>
+</div>
+
+
+{% endblock %}

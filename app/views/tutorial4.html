@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    
+<div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      MOJ Prototype Kit Training 
+    </h1>
+</div>
+
+
+
+	  <div class="govuk-grid-column-one-third">
+
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	        <li class="moj-side-navigation__item ">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item ">
+	          <a href="Tutorial3" aria-current="location">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+	          <a href="Tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+	      </ul>
+	    </nav>
+
+	  </div>
+
+	  <div class="govuk-grid-column-two-thirds">
+
+	 	<h2 class="govuk-heading-l">Tutorial four - Show and hiding things based on answers</h2>
+
+	 	<p> Showing and hiding things based on the inputs of users answers is a useful tip to create realistic testing scenarios.  	</p>
+
+	 	
+
+	 	<p> Unfortunately, this will require some altering of the check answers page. We will need to change the entire page from nunjucks to HTML to make this work.   	</p>
+
+	 	<p> First, in the code editor navigate to the check answers page. You can now either replace the whole page or you can replace just the table component. Once you have replaced the table, remember to change the content as well as the bits for data playback. </p>
+
+	 	<p> You are able to get the code for this from <a href="">the GDS design system</a>  </p>
+
+	 
+
+	 	<a href=""></a>
+
+	 	<p> For the current example, when a user naviagtes through the changing name journey if they select no on the radio button page, the user will still see the question appear on the check answers page. By adding some simple lines of code we can have this line only appear if the user answers yes on the radio button question. </p>
+
+	 	<p>  </p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c5fdbd842adf422a93ef58ff41da7d49?sid=45b8b8d1-1b55-4ecb-8964-ee9cd624db58" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br> <br>
+
+	 	<p> So at present the prototype currently shows the extra line but this is confusing behaviour.  </p>
+
+	 	<p> First of all within the check answers page code find the snippet, which playsback the third question information </p>
+
+	 	<p> Above the that section add the following <span style="font-weight: bold"> "{ % if  data['choicenewname'] == "Yes"  % }" </span> and then underneath the section add in <span style="font-weight: bold;"> { % endif % } </span>  </p>
+
+	 	<p> This will tell the prototype that if the radio button question which has the name  "choicenewname" is answered Yes then to go ahead and show the following lines of code. This also means if the user selects No, it will not show it </p>
+
+	 	<p> Below is how the code should now look  </p>
+
+	 	<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/f63d6a87d3ff48b08c6b9f2b6e0fd5d2?sid=fa290fab-b20e-45b3-9fb5-723378df8c3c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br> <br>
+
+	 	<p> First of all within the check answers page code find the snippet, which playsback the third question information </p>
+
+	 	<p>  It should now playthrough like below.	</p>
+
+	 	<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/a5498db61f344cdab156fac365e42794?sid=f08b248a-5152-481d-a703-d5bf076aad85" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br> <br>
+
+	 	
+
+	 </div>	
+
+
+{% endblock %}

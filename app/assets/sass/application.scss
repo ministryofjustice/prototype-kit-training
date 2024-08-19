@@ -1,6 +1,246 @@
-//
-// For guidance on how to add CSS and SCSS see:
-// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
-// 
 
-// Add extra styles here
+.moj-side-navigation {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+}
+@media print {
+  .moj-side-navigation {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .moj-side-navigation {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+@media print {
+  .moj-side-navigation {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 40.0525em) {
+  .moj-side-navigation {
+    display: flex;
+    overflow-x: scroll;
+  }
+}
+@media (min-width: 40.0625em) {
+  .moj-side-navigation {
+    display: block;
+    padding: 0px 0 0;
+  }
+}
+
+.moj-side-navigation__title {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #505a5f;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px;
+  padding-left: 14px;
+}
+@media print {
+  .moj-side-navigation__title {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .moj-side-navigation__title {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+}
+@media print {
+  .moj-side-navigation__title {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+@media (max-width: 40.0525em) {
+  .moj-side-navigation__title {
+    display: none;
+  }
+}
+
+.moj-side-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 40.0525em) {
+  .moj-side-navigation__list {
+    display: flex;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 40.0625em) {
+  .moj-side-navigation__list {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 40.0525em) {
+  .moj-side-navigation__item {
+    display: flex;
+  }
+}
+.moj-side-navigation__item a,
+.moj-side-navigation__item a:link,
+.moj-side-navigation__item a:visited {
+  background-color: inherit;
+  color: #1d70b8;
+  display: block;
+  text-decoration: none;
+}
+@media (max-width: 40.0525em) {
+  .moj-side-navigation__item a,
+  .moj-side-navigation__item a:link,
+  .moj-side-navigation__item a:visited {
+    border-bottom: 4px solid transparent;
+    padding: 15px;
+    padding-bottom: 11px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .moj-side-navigation__item a,
+  .moj-side-navigation__item a:link,
+  .moj-side-navigation__item a:visited {
+    background-color: inherit;
+    border-left: 4px solid transparent;
+    padding: 10px;
+  }
+}
+.moj-side-navigation__item a:hover {
+  border-color: #5694ca;
+}
+.moj-side-navigation__item a:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  border-color: #0b0c0c;
+  border-left-color: transparent;
+  position: relative;
+}
+
+.moj-side-navigation__item--active a:link,
+.moj-side-navigation__item--active a:visited {
+  border-color: #1d70b8;
+  color: #1d70b8;
+  font-weight: bold;
+}
+.moj-side-navigation__item--active a:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  border-color: #0b0c0c;
+  border-left-color: transparent;
+}
+@media (min-width: 40.0625em) {
+  .moj-side-navigation__item--active a:link,
+  .moj-side-navigation__item--active a:visited {
+    background-color: #f3f2f1;
+  }
+  .moj-side-navigation__item--active a:focus {
+    color: #0b0c0c;
+    background-color: #ffdd00;
+    border-color: transparent;
+  }
+}
+
+[aria-sort] button,
+[aria-sort] button:hover {
+  background-color: transparent;
+  border-width: 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  color: #005ea5;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0 10px 0 0;
+  position: relative;
+  text-align: inherit;
+  font-size: 1em;
+  margin: 0;
+}
+
+[aria-sort] button:focus {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  outline: none;
+}
+
+[aria-sort]:first-child button {
+  right: auto;
+}
+
+[aria-sort] button:before {
+  content: " ▼";
+  position: absolute;
+  right: -1px;
+  top: 9px;
+  font-size: 0.5em;
+}
+
+[aria-sort] button:after {
+  content: " ▲";
+  position: absolute;
+  right: -1px;
+  top: 1px;
+  font-size: 0.5em;
+}
+
+[aria-sort=ascending] button:before,
+[aria-sort=descending] button:before {
+  content: none;
+}
+
+[aria-sort=ascending] button:after {
+  content: " ▲";
+  font-size: 0.8em;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+}
+
+[aria-sort=descending] button:after {
+  content: " ▼";
+  font-size: 0.8em;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+}
+
+
+.govuk-main-wrapper-2 {
+	padding-top: 0px;
+
+}
+
+
+
+
+p {
+
+
+}
+

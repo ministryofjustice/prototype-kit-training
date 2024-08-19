@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<!-- THIS IS THE FIRST QUESTION PAGE -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Change your name
+      </h1>
+
+      <form class="form" action="/prototype-kit-training-page-2" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            What is your name?
+          </label>
+          <input class="govuk-input" id="event-name" name="currentname" type="text">
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+  
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    
+<div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      MOJ Prototype Kit Training 
+    </h1>
+</div>
+
+
+
+	  <div class="govuk-grid-column-one-third">
+
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	        <li class="moj-side-navigation__item ">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+	          <a href="Tutorial3" aria-current="location">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="Tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+	      </ul>
+	    </nav>
+
+	  </div>
+
+	  <div class="govuk-grid-column-two-thirds">
+
+	 	<h2 class="govuk-heading-l">Tutorial Three - Routing</h2>
+
+	 	<p> Routing allows us to branch off from a form, customising what the user sees next. 	</p>
+
+	 	<p> An example of this would be branching the user away from a form they are no longer eligible for. </p>
+
+	 	<p> For our example we will branch from our radio button question where if a user selects "No" to wanting to change their name then they do not see the enter new name question page, skipping to the check answers page. Alternatively you could route to a page which informs the user that they are no longer eligble for the service. </p>
+
+	 	<p> In the radio buttons question code look for the name. In our example it is <span style="font-weight: bold"> name="choicenewname"  </span> </p>
+
+	 	<p> Now we need to set the route off from the page. To achieve this we need to alter the text in the form action on the radio button page. Within the form action change that currently says <span style="font-weight: bold"> action="/prototype-kit-training-page-3" </span> which currently just takes you to the third question page. However, instead change this to say <span style="font-weight: bold;"> action="/prototype-kit-training-page-2-submit" </span> This will result in the prototype making a request to write a route to the right path. </p>
+
+	 	<p> Next to make this work, some logic needs to be added. This will process the user’s answer to the question. </p>
+
+	 	<p> If the user selects "Yes", the prototype shall send the user to the next question as they do want to change their name. If they answer with "No", the prototype shall send them straight to the check answers page. As mentioned previously you can make this branch to an ineligible page.  </p>
+
+	 	<p> To create these routes you first need to find the routes.js folder in your prototype. Below is a video showing you where the routes folder is located  </p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/4907d41caca147e1a1966f20412b3f0e?sid=5825c03b-4096-4c67-9eae-e91768885883" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<p> To create these routes you first need to find the routes.js folder in your prototype. Below is a video showing you where the routes folder is located  </p>
+
+	 	<p> Now in here we need to add some code to this page. Add the following:  </p> 
+
+	 	<p> router.post('/prototype-kit-training-page-2-submit', function (req, res) {
+
+	 		// Make a variable and give it the value from 'how-many-balls' <br>
+
+	 		var radiobuttonname = req.session.data['choicenewname'] <br>
+
+	 		// Check whether the variable matches a condition <br>
+
+	 		if (radiobuttonname == "Yes"){ <br>
+
+	 		// Send user to next page <br>
+    		
+    		res.redirect('prototype-kit-training-page-3')} <br>
+
+    		else { <br>
+    		
+    		// Send user to ineligible / check answers page <br>
+    
+    		res.redirect('prototype-kit-training-page-4') <br>
+		  }	
+		}) <p>
+
+		<p> Below is how it should now look in the routes folder:  </p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/dd01c84c777f4bc09d679a43d902e0c2?sid=70046fc2-5ed8-4a7c-b1e8-9335f9d860a6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br> <br>
+
+
+
+	 	<p> Below is a run through of how the pages should work. </p>
+
+	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/c5fdbd842adf422a93ef58ff41da7d49?sid=45b8b8d1-1b55-4ecb-8964-ee9cd624db58" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br> <br>
+
+	 	<p>In the next tutorial it will cover how to use this collected conditional data to show and hide lines on the check answers page so that it makes sense.</p>
+
+
+
+	 </div>	
+
+
+{% endblock %}
