@@ -1,5 +1,5 @@
+let tables = require('./tables.json')
+
 module.exports = {
-
-  // Insert values here
-
+	tables
 }

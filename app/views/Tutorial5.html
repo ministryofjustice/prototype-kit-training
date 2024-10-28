@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    
+<div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      MOJ Prototype Kit Training 
+    </h1>
+</div>
+
+
+
+	  <div class="govuk-grid-column-one-third">
+
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	        <li class="moj-side-navigation__item ">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item ">
+	          <a href="tutorial3" aria-current="location">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item moj-side-navigation__item--active">
+	          <a href="tutorial4" aria-current="location">Tutorial five - Text inputs remembering previously entered data</a>
+	        </li>
+	      </ul>
+	    </nav>
+
+	  </div>
+
+	  <div class="govuk-grid-column-two-thirds">
+
+	 	<h2 class="govuk-heading-l">Tutorial five - Text inputs remembering previously entered data</h2>
+
+	 	<p>  At the moment when a user then clicks on the change links nothing will happen. First, change the hrefs on the check answers page so they redirect the user back to the corresponding question page. This is the same set of actions from the linking pages section earlier.  </p>
+
+	 	<div style="position: relative; padding-bottom: 51.041666666666664%; height: 0;"><iframe src="https://www.loom.com/embed/41cb012dea114b2992398be541d49f08?sid=c11850b4-425e-48e6-bc47-260070fbd014" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	
+
+	 	<p>  Once the hrefs have been altered and are linking back to the correct pages, navigate back to the corresponding question pages. </p> 
+
+
+
+	 	<p> On the first question page where users are asked to enter their name, find the code relating to the questions input. Within the input place 
+	 		<span style="font-weight: bold;"> value="{ { data[' currentname '] } }" </span> and this shall replay whatever the user enters when they navigate back to this page</p>
+
+	 	<div style="position: relative; padding-bottom: 51.00463678516228%; height: 0;"><iframe src="https://www.loom.com/embed/8af6bf55016842af9803b4b93352e280?sid=2b547d23-f2ef-465d-a729-a593a89a85e9" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br> <br>
+
+
+	 	<p> It should now work like the following for the first question: </p>
+
+	 	<div style="position: relative; padding-bottom: 57.75401069518716%; height: 0;"><iframe src="https://www.loom.com/embed/747bb23d58af49c3a33f60b627c7a48d?sid=a0ddba1d-9996-4392-ae5d-73dbbdc3c159" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br>
+
+	 	<p> Though when the user clicks on the save and continue button, the prototype  shall move the user to the second question page. This unfortunately is not expected behaviour, the user ideally would be taken back to the check answers page. This is due to the fact the user has come from the check answers looking only to edit one piece of information.  <a href=""></a>  </p>
+
+	 	<p>  To acheive this we must add some further code to the <span style="font-weight: bold;"> form action </span> on the first question page. Firstly, place a <span style="font-weight: bold;"> If statement </span> above the existing form action. </p>
+
+	 	<p>  For example <span style="font-weight: bold;">{ % if  data['came-from-check-answers'] == "true"  % } </span>. Then copy the existing form action so that there is two and separate them onto different lines. Change the newly copied <span style="font-weight: bold;"> form action </span>  to say  <span style="font-weight: bold;">/prototype-kit-training-page-4?came-from-check-answers=false&</span>.  </p>
+
+	 	<p> Place the following <span style="font-weight: bold;"> { % else % } </span> between the two form action lines. To finish add <span style="font-weight: bold;"> { % endif % } </span> under the bottom form action. It should look like the video below.</p>
+
+	 	<div style="position: relative; padding-bottom: 55.41666666666667%; height: 0;"><iframe src="https://www.loom.com/embed/a5c48768f1f44e88ab08f6477bef154d?sid=bcdd95e1-90bd-45f6-bfae-528448b8136b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+	 	<br>
+
+	 	<p> This will now allow the prototype to work out whether the user has come from the check answers page and if so, it will automatically reroute the user back to the check answers page.</p>
+
+	 
+
+	 	<a href=""></a>
+
+	 	<p></p>
+
+	 	<p>  </p>
+
+	 	<br> <br>
+
+	 	<p>   </p>
+
+	 	<p> </p>
+
+	 	<p></span>  </p>
+
+	 	<p> </p>
+
+	 	<p>   </p>
+
+	 	
+
+	 	
+
+	 </div>	
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+<div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      MOJ Prototype Kit Training 
+    </h1>
+</div>
+
+
+
+
+	  <div class="govuk-grid-column-one-third">
+
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	        
+	       <li class="moj-side-navigation__item ">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item ">
+	          <a href="tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	       <li class="moj-side-navigation__item">
+	          <a href="tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial3">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial5" aria-current="location">Tutorial five - Text inputs remembering previously entered data</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item moj-side-navigation__item--active">
+	          <a href="tutorial5" aria-current="location">Other tips - Looping data through json</a>
+	        </li>
+	      </ul>
+	    </nav>
+
+	  </div>
+
+
+	   <div class="govuk-grid-column-two-thirds">
+
+	 	<h2 class="govuk-heading-l">Other tips - Looping data through json</h2>
+
+	 	<p> To loop data through a json folder is a handy technique of saving time when prototyping if encountering a situation where you have to produce a lot of tables in a case management system. By doing ... </p>
+
+	 	<p> For this example the looping of data will be used to populate a table. You can use this however for a number of different things such as... </p>
+
+	 	<p> First we will need to have a page set up that has a table that we can loop the data into. You can do this by going to the /manage-prototype and selecting a page from one of the templates </p>
+
+		
+		</div>
+
+
+
+
+
+
+
+
+{% endblock %}

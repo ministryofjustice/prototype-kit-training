@@ -13,15 +13,17 @@
 
 {% block content %}
 
+
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-
       <h1 class="govuk-heading-xl">
         Check your answers before sending your application
       </h1>
 
+
         <h2 class="govuk-heading-m">Personal details</h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <dl class="govuk-summary-list govuk-!-mar§gin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               What is your name?
@@ -30,7 +32,7 @@
              {{ data['currentname'] or ['Current name not entered'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+              <a class="govuk-link" href="prototype-kit-training-page?came-from-check-answers=true&">Change<span class="govuk-visually-hidden"> name</span></a>
             </dd>
           </div>
 
@@ -42,7 +44,7 @@
              {{data['choicenewname'] or ['Nothing selected']}}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+              <a class="govuk-link" href="prototype-kit-training-page-2">Change<span class="govuk-visually-hidden"> date of birth</span></a>
             </dd>
           </div>
 
@@ -57,7 +59,7 @@
               {{ data['newname'] or ['New name not entered'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+              <a class="govuk-link" href="/prototype-kit-training-page-3">Change<span class="govuk-visually-hidden"> customer reference</span></a>
             </dd>
           </div>
 
