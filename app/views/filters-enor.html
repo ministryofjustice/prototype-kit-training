@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+<main role="main" class="new govuk-main-wrapper">
+
+
+      <div class="govuk-grid-row">
+        <div id="filters-column" class="govuk-grid-column-one-quarter">
+          {% include "/filters-enor-2.html" %}
+        </div>
+
+        <div id="table-column" class="govuk-grid-column-three-quarters">
+
+         <button id="toggle-filters" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Hide filters
+          </button>
+         
+
+      
+          
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script src="/public/javascripts/workflow.js"></script>
+
+
+<script type="text/javascript">
+  element = document.querySelector('#tt-overlay')
+  id = 'autocomplete-overlay'
+  accessibleAutocomplete({
+    displayMenu: 'overlay',
+    element: element,
+    id: id,
+    source: caseManagers
+  })
+</script>
+
+<script type="text/javascript">
+  element = document.querySelector('#tt-autoselect')
+  id = 'autocomplete-autoselect'
+  accessibleAutocomplete({
+    autoselect: true,
+    element: element,
+    id: id,
+    source: caseManagers
+  })
+</script>
+{% endblock %}

@@ -11,13 +11,19 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 
 router.post('/prototype-kit-training-page-2-submit', function (req, res) {
-// Make a variable and give it the value from 'how-many-balls'
-var radiobuttonname = req.session.data['choicenewname']
-// Check whether the variable matches a condition
-if (radiobuttonname == "Yes"){
-// Send user to next page
-res.redirect('prototype-kit-training-page-3')}
-else {
-// Send user to ineligible / check answers page
-res.redirect('prototype-kit-training-page-4')
-} })
+	// Make a variable and give it the value from the question
+	var radiobuttonname = req.session.data['choicenewname']
+	// Check whether the variable matches a condition
+	if (radiobuttonname == "Yes"){
+	// Send user to next page
+	res.redirect('prototype-kit-training-page-3')}
+	else {
+	// Send user to ineligible / check answers page
+	res.redirect('prototype-kit-training-page-4')
+	} 
+})
+
+
+
+
+
