@@ -9,6 +9,7 @@
     "@govuk-prototype-kit/step-by-step": "2.2.3",
     "@ministryofjustice/frontend": "^3.0.2",
     "govuk-frontend": "5.4.0",
-    "govuk-prototype-kit": "13.16.2"
+    "govuk-prototype-kit": "13.16.2",
+    "jquery": "3.7.1"
   }
 }
