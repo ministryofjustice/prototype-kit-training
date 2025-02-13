@@ -6,14 +6,15 @@
 
 <div class="govuk-grid-row">
 
-<div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-xl">
-      Ryan's Prototype Kit Training 
-    </h1>
-</div>
+		<div class="govuk-grid-column-full">
+		    <h1 class="govuk-heading-xl">
+		      Ryan's Prototype Kit Training 
+		    </h1>
+		</div>
 
-	  <div class="govuk-grid-column-one-third">
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+<div class="govuk-grid-column-one-third">
+ <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading">
@@ -43,7 +44,7 @@
      <!-- This is the first option --> 
 
       <div id="accordion-default-content-1" style="padding-bottom: 5px; font-family: GDS Transport, arial, sans-serif; font-size: 19px; padding-left: 10px;" class="govuk-accordion__section-content">
-       <li class="moj-side-navigation__item " style="list-style-type: none"> 
+       <li class="moj-side-navigation__item moj-side-navigation__item--active" style="list-style-type: none"> 
        	<a href="index" >Getting started - Code editors </a></li>
     </div>
 
@@ -56,7 +57,7 @@
 
 <!-- This is the Third option -->
      <div id="accordion-default-content-1" style="padding-bottom: 5px; font-family: GDS Transport, arial, sans-serif; font-size: 19px; padding-left: 10px;" class="govuk-accordion__section-content">
-       <li class="moj-side-navigation__item moj-side-navigation__item--active" style="list-style-type: none"> 
+       <li class="moj-side-navigation__item" style="list-style-type: none"> 
        	<a href="Gettingstarted3" >Getting started - Opening and running the kit </a></li>
     </div>
   
@@ -72,12 +73,7 @@
       </h2>
     </div>
     <div id="accordion-default-content-3" class="govuk-accordion__section-content">
-      <p class="govuk-body">These are the Intermediate skills .</p>
-      <!-- This is the Third option -->
-     <div id="accordion-default-content-1" style="padding-bottom: 5px; font-family: GDS Transport, arial, sans-serif; font-size: 19px; padding-left: 10px;" class="govuk-accordion__section-content">
-       <li class="moj-side-navigation__item" style="list-style-type: none"> 
-       	<a href="Gettingstarted3" > </a></li>
-    </div>
+      <p class="govuk-body">This is the content for Know your audience.</p>
     </div>
   </div>
   <div class="govuk-accordion__section">
@@ -106,38 +102,62 @@
   </div>
 </div>
 
+<!--
+	    <nav class="moj-side-navigation" aria-label="Side navigation">
+	      <ul class="moj-side-navigation__list">
+	        <li class="moj-side-navigation__item  moj-side-navigation__item--active">
+	          <a href="index" >Getting started - Code editors</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted2" >Getting started - Checking node</a>
+	        </li>
+
+	         <li class="moj-side-navigation__item ">
+	          <a href="Gettingstarted3" >Getting started - Opening and running the kit</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	         <a href="tutorial1" >Tutorial one - Creating, editing and linking pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial2" aria-current="location">Tutorial two - Passing data between pages</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial3">Tutorial three - Routing</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial4" aria-current="location">Tutorial four - Using data to conditionally show and hide things</a>
+	        </li>
+
+	        <li class="moj-side-navigation__item">
+	          <a href="tutorial5" aria-current="location">Tutorial five - Text inputs remembering previously entered data</a>
+	        </li>
+	      </ul>
+	    </nav>
+
 	  </div>
-	
+
+-->
+</div>
 
 	 
-<div class="govuk-grid-column-two-thirds">
-	 	<h2 class="govuk-heading-l" >Getting started - Opening and running the kit</h2>
+	 <main role="main" class="new govuk-main-wrapper-2">
+	 	<h2 class="govuk-heading-l">Getting started - Code editors</h2>
 
 
 
-	 	<p>If you are now running node at version 20 (or maybe you are close enough) you can now begin to open and run the kit </p>
+	 	<p>Before we can get started with creating prototypes, we first need to check we have a few things downloaded and set up.</p>
 
-	 	<p>If you create a new folder on your desktop and call it whatever is relevant to your team etc, but for this example it shall be called <span style="font-weight: bold"> tutorials </span>. Next open this folder and place another folder inside that, again I shall use the example of <span style="font-weight: bold;"> prototype-kit </span> </p>
-
-	 	<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/8c9dbbeb736f447c8dad8e3f35059099?sid=1a65799a-a32b-43ab-956c-7b72101848ba" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0px; width: 100%; height: 100%;"></iframe></div>
-
-	 	<br> <br>
+	 	<p>Firstly, you will need to download a code editor, which are available from self service in the developer tools section. The names of the most popular ones are <span style="font-weight: bold;">Visual Code Studio, Sublime and Atom</span></p>
 
 
-	 	<p> To open to your prototype, you will need to know a couple of commands for the terminal. To navigate to your prototype first type the following command into the terminal and press enter <span style="font-weight: bold;"> cd ~/desktop/'first folder name'/'second folder name' </span> so for our example it would be the following <span style="font-weight: bold;">  cd ~/desktop/tutorials/prototype-kit </span></p>
 
-	 	<p>Once you can see that you have navigated to the right folder you enter the following command <span style="font-weight: bold;">npx govuk-prototype-kit@latest create </span>. This will essentially tell your machine to fill the folder with all of the pieces needed for the prototype kit.  </p>
-
-	 	<p>You will then need to type in a few prompts such as <span style="font-weight: bold;"> npm run dev </span> and reply by typing <span style="font-weight: bold;"> y </span> and eventually you will be given a link where your prototype is now running locally. HOORAH! </p>
-
-
-	 
 	 </div>	
-	 </div>
 	</div>
-
-
-	 
 
 
 {% endblock %}

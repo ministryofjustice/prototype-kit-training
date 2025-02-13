@@ -1,6 +1,7 @@
 /* Workflow prototype specific styles $ */
 
 
+
 // Open and close the filters panel
 
 jQuery(document).ready(function($) {

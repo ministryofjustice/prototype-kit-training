@@ -24,6 +24,26 @@ router.post('/prototype-kit-training-page-2-submit', function (req, res) {
 })
 
 
+router.post('/exports-answer', function(request, response) {
+    var exports = request.session.data['exports']
+    if (exports.includes("Fruit") && exports.includes("Vegetables")){
+        response.redirect("/fruitandvegetables")
+    } 
+
+    else if (exports.includes("Fruit")){
+        response.redirect("/fruit")
+    } 
+
+    else if (exports.includes("Vegetables")){
+        response.redirect("/Vegetables")
+    }
+    
+    else if (exports.includes("Meat")){
+        response.redirect("/meat")
+    }
+   
+})
+
 
 
 

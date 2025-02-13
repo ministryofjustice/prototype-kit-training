@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+
+
+<form class="form" action="/exports-answer" method="post">
+
+{{ govukCheckboxes({
+  name: "exports",
+  values: data["exports"],
+  fieldset: {
+    legend: {
+      text: "What do you export?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "Fruit",
+      text: "Fruit"
+    },
+    {
+      value: "Vegetables",
+      text: "Vegetables"
+    },
+    {
+      value: "Meat",
+      text: "Meat"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
+
+
+
+
+{% endblock %}
