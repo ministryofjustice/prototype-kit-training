@@ -45,5 +45,22 @@ router.post('/exports-answer', function(request, response) {
 })
 
 
+router.post('/search', function (req, res)
+    {
+        if( req.session.data['search-nofilters'].includes("search 1") ||
+            req.session.data['search-nofilters'].includes("search 2")  
+            ) 
 
+        {
+            res.redirect('search-results-routing-1');
+        }
+
+        
+
+        else ( req.session.data['search-nofilters'].includes("") )
+        {
+            res.redirect('search-results-routing-2');
+        }
+
+    })
 
