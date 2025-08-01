@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+<div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Prototype Kit Training 
+    </h1>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <h4 class="moj-side-navigation__title">Introduction</h4>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item ">
+          <a href="#1.1" aria-current="location">Introduction</a>
+        </li>
+      </ul>
+
+      <h4 class="moj-side-navigation__title">Tutorials</h4>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="/populate-tables-JSON">Populating tables using JSON</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="/branching-search-box">Branching from search box</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="/filters1">Filtering</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+
+
+	   <div class="govuk-grid-column-two-thirds">
+
+	 	<h2 class="govuk-heading-l">Populate tables through looping JSON data</h2>
+
+	 	<p> To loop data through a json folder is a handy technique of saving time when prototyping if encountering a situation where you have to produce a lot of tables in a case management system. </p>
+
+	 	<p> For this example the looping of data will be used to populate a table. This method helps with scalability and flexibility by allowing the adding or modifying of data without changing the overall structure of your code. It also will help in terms of iterating of designs, speeding up the time it takes to test different data sets. </p>
+
+	 	<p> First we will need to have a page set up that has a table that we can loop the data into.</p>
+
+	 	<p> Once the page is set up with the table in place we need to go about setting up the json parts. </p>
+
+	 	<p> Create a folder in the <span style="font-weight: bold;"> data </span> section of your prototype and save it <span style="font-weight: bold;"> .json </span>, so for example tables.json </p>
+
+	 	
+
+
+
+
+		
+		</div>
+
+
+
+
+
+
+
+
+{% endblock %}
