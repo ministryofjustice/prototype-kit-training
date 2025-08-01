@@ -24,6 +24,7 @@ router.post('/prototype-kit-training-page-2-submit', function (req, res) {
 })
 
 
+// Add your routes here
 router.post('/exports-answer', function(request, response) {
     var exports = request.session.data['exports']
     if (exports.includes("Fruit") && exports.includes("Vegetables")){
@@ -45,10 +46,13 @@ router.post('/exports-answer', function(request, response) {
 })
 
 
+// Search bar routes
 router.post('/search', function (req, res)
     {
         if( req.session.data['search-nofilters'].includes("search 1") ||
-            req.session.data['search-nofilters'].includes("search 2")  
+            req.session.data['search-nofilters'].includes("search 2") ||
+            req.session.data['search-nofilters'].includes("search 3")
+
             ) 
 
         {
