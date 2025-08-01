@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+<div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Prototype Kit Training 
+    </h1>
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <h4 class="moj-side-navigation__title">Introduction</h4>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item ">
+          <a href="#1.1" aria-current="location">Introduction</a>
+        </li>
+      </ul>
+
+      <h4 class="moj-side-navigation__title">Tutorials</h4>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="/populate-tables-JSON">Populating tables using JSON</a>
+        </li>
+
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="/branching-search-box">Branching from a search box</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="/filters">Filtering</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+
+
+	   <div class="govuk-grid-column-two-thirds">
+
+	 	<h2 class="govuk-heading-l">Branching from a search box</h2>
+
+	 	<p> Branching from a search box within a coded prototype design enables you to significantly enhance the realism, flexibility, and testability of your prototype</p>
+
+    <p> Branching allows the prototype to respond differently based on user input. By enabling a user to be able to type in multiple search terms and end up at different pages mimics how a real system would behave. This in turn helps to make usability testing more meaningful. </p>
+
+
+	 	
+
+
+
+
+		
+		</div>
+
+
+
+
+
+
+
+
+{% endblock %}

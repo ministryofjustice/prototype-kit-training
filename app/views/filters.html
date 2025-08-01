@@ -14,20 +14,45 @@
 
 <main role="main" class="new govuk-main-wrapper">
 
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-third">
+
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <h4 class="moj-side-navigation__title">Introduction</h4>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="#1.1" aria-current="location">Introduction</a>
+        </li>
+      </ul>
+
+      <h4 class="moj-side-navigation__title">Tutorials</h4>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item ">
+          <a href="/populate-tables-JSON">Populating tables using JSON</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="/branching-search-box">Branching from a search box</a>
+        </li>
+
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="/filters">Filtering</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
 
       <div class="govuk-grid-row">
         <div id="filters-column" class="govuk-grid-column-one-quarter">
           {% include "/filters-enor-2.html" %}
         </div>
 
-        <div id="table-column" class="govuk-grid-column-three-quarters">
 
          <button id="toggle-filters" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Hide filters
           </button>
-         
-
-      
           
         </div>
 
@@ -36,7 +61,10 @@
     </div>
   </div>
 
+
 </main>
+
+
 
 {% endblock %}
 
