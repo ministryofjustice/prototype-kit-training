@@ -39,6 +39,14 @@
         <li class="moj-side-navigation__item">
           <a href="/filters">Filtering</a>
         </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="/showing-hiding-content">Showing and hiding content </a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+          <a href="/conditional-data">Conditionally revealing content </a>
+        </li>
       </ul>
     </nav>
 
@@ -54,7 +62,23 @@
 
 	 	<p> For this example the looping of data will be used to populate a table. This method helps with scalability and flexibility by allowing the adding or modifying of data without changing the overall structure of your code. It also will help in terms of iterating of designs, speeding up the time it takes to test different data sets. </p>
 
-	 	<p> First we will need to have a page set up that has a table that we can loop the data into.</p>
+	 	<p> First of all think about what data you will need to be displayed. For this example will be looking at including;  </p>
+
+	 	<ul class="govuk-list govuk-list--bullet">
+	      <li> Name (surname, first name) </li>
+	      <li> Reference number</li>
+	      <li> Date received</li>
+	      <li> Status (new, in progress, complete, overdue)</li>
+      	</ul>
+
+      	<p> Though remember you can choose whatever pieces of data are most relevant to yourself. </p>
+
+      	<p> Next you will want to create these data sets, now this can be done manually by yourself or you can create them using Ai using Co-Pilot or ChatGPT. </p> 
+
+
+
+
+	 	<p> In your code editor, create the structure of your table or whatever items of data you want to loop through </p>
 
 	 	<p> Once the page is set up with the table in place we need to go about setting up the json parts. </p>
 
